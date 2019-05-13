@@ -1,4 +1,4 @@
-Jenkins.instance.getAllItems(AbstractProject.class).each {it ->
-  println it.fullName;
-  it.makeDisabled(true)
-}
+ Jenkins.instance.getAllItems(Job.class).each{ 
+    println it.name + " - " + it.class
+    it.makeDisabled(true)
+  }
